@@ -1,10 +1,10 @@
 name: wmp_fe
-description: An absolute bare-bones web app.
+description: Weekly Meal Planner frontend code.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/my_org/wmp_fe
 
 environment:
-  sdk: '>=2.19.3 <3.0.0'
+  sdk: ">=2.19.3 <3.0.0"
 
 # dependencies:
 #   path: ^1.8.0
