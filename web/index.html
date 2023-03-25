@@ -1,19 +1,119 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
-    <title>wmp_fe</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="main.dart.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="scaffolded-by"
+        content="https://github.com/dart-lang/sdk">
+  <title>Weekly Meal Planner</title>
+  <link rel="stylesheet"
+        href="styles.css">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script defer
+          src="main.dart.js"></script>
 </head>
 
 <body>
-
-  <div id="output"></div>
-
+  <div class="flex-row">
+    <div class="aside flex-column">
+      <h4>
+        WEEKLY<br>
+        MEAL<br>
+        PLANNER
+      </h4>
+      <div class="pad-5"></div>
+      <button class="btn-util flex-row">
+        <i class="material-icons md-18">restart_alt</i>&nbsp;
+        Renew foods
+      </button>
+      <button class="btn-util flex-row"">
+        <i class="
+              material-icons
+              md-18">edit</i>&nbsp;
+        Edit foods
+      </button>
+    </div>
+    <div class="schedule flex-row">
+      <div class="today">
+        <div class="flex-column card card-main">
+          <h5>23 Monday</h5>
+          <div class="flex-row title">
+            <p class="title-icon">*</p>
+            <h1>Today</h1>
+          </div>
+          <div class="flex-row details">
+            <div class="chiclet">Breakfast</div>
+            &nbsp;
+            <p class="price">Ksh <span>123</span></p>
+          </div>
+          <div class="food">Bread and Eggs</div>
+          <div class="flex-row details">
+            <div class="chiclet">Supper</div>
+            &nbsp;
+            <p class="price">Ksh <span>123</span></p>
+          </div>
+          <div class="food">Chapati and Beans</div>
+          <div class="price-total">Total: Ksh <span>123</span></div>
+        </div>
+      </div>
+      <div class="week">
+        <div class="card card-minor">
+          <h4>Sunday</h4>
+          <p class="minor-headings">BREAKFAST</p>
+          <p>Bread and eggs</p>
+          <p class="minor-headings">Supper</p>
+          <p>Chapati and beans</p>
+          <p class="minor-price">Total: Ksh 123</p>
+        </div>
+        <div class="card card-minor">
+          <h4>Sunday</h4>
+          <p class="minor-headings">BREAKFAST</p>
+          <p>Bread and eggs</p>
+          <p class="minor-headings">Supper</p>
+          <p>Chapati and beans</p>
+          <p class="minor-price">Total: Ksh 123</p>
+        </div>
+        <div class="card card-minor">
+          <h4>Sunday</h4>
+          <p class="minor-headings">BREAKFAST</p>
+          <p>Bread and eggs</p>
+          <p class="minor-headings">Supper</p>
+          <p>Chapati and beans</p>
+          <p class="minor-price">Total: Ksh 123</p>
+        </div>
+        <div class="card card-minor">
+          <h4>Sunday</h4>
+          <p class="minor-headings">BREAKFAST</p>
+          <p>Bread and eggs</p>
+          <p class="minor-headings">Supper</p>
+          <p>Chapati and beans</p>
+          <p class="minor-price">Total: Ksh 123</p>
+        </div>
+        <div class="card card-minor">
+          <h4>Sunday</h4>
+          <p class="minor-headings">BREAKFAST</p>
+          <p>Bread and eggs</p>
+          <p class="minor-headings">Supper</p>
+          <p>Chapati and beans</p>
+          <p class="minor-price">Total: Ksh 123</p>
+        </div>
+        <div class="card card-minor">
+          <h4>Sunday</h4>
+          <p class="minor-headings">BREAKFAST</p>
+          <p>Bread and eggs</p>
+          <p class="minor-headings">Supper</p>
+          <p>Chapati and beans</p>
+          <p class="minor-price">Total: Ksh 123</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
