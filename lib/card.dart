@@ -64,60 +64,59 @@ class Card {
   HtmlElement ui() => DivElement()
     ..classes
         .addAll(['flex-column', 'card', isToday() ? 'card-main' : 'card-minor'])
-    ..children = [
-      if (isToday())
-        HeadingElement.h5()..innerText = '${date.day} ${whatDay(date.weekday)}',
-      if (isToday())
-        DivElement()
-          ..classes.addAll(['flex-row', 'title'])
-          ..children = [
+    ..children = isToday()
+        ? [
+            HeadingElement.h5()
+              ..innerText = '${date.day} ${whatDay(date.weekday)}',
+            DivElement()
+              ..classes.addAll(['flex-row', 'title'])
+              ..children = [
+                ParagraphElement()
+                  ..className = 'title-icon'
+                  ..innerText = '*',
+                HeadingElement.h1()..innerText = 'Today',
+              ],
+            DivElement()
+              ..classes.addAll(['flex-row', 'details'])
+              ..children = [
+                DivElement()
+                  ..className = 'chiclet'
+                  ..innerHtml = 'Breakfast',
+                ParagraphElement()
+                  ..className = 'price'
+                  ..innerHtml = '&nbsp;Ksh <span>$breakfastPrice</span>',
+              ],
+            DivElement()
+              ..className = 'food'
+              ..innerText = breakfast,
+            DivElement()
+              ..classes.addAll(['flex-row', 'details'])
+              ..children = [
+                DivElement()
+                  ..className = 'chiclet'
+                  ..innerHtml = 'Supper',
+                ParagraphElement()
+                  ..className = 'price'
+                  ..innerHtml = '&nbsp;Ksh <span>$supperPrice</span>',
+              ],
+            DivElement()
+              ..className = 'food'
+              ..innerText = supper,
+            DivElement()
+              ..className = 'price-total'
+              ..innerHtml = 'Total: Ksh <span>${totalPrice()}</span>',
+          ]
+        : [
             ParagraphElement()
-              ..className = 'title-icon'
-              ..innerText = '*',
-            HeadingElement.h1()..innerText = 'Today',
-          ],
-      DivElement()
-        ..classes.addAll(['flex-row', 'details'])
-        ..children = [
-          DivElement()
-            ..className = 'chiclet'
-            ..innerHtml = 'Breakfast',
-          ParagraphElement()
-            ..className = 'price'
-            ..innerHtml = '&nbsp;Ksh <span>$breakfastPrice</span>',
-        ],
-      DivElement()
-        ..className = 'food'
-        ..innerText = breakfast,
-      DivElement()
-        ..classes.addAll(['flex-row', 'details'])
-        ..children = [
-          DivElement()
-            ..className = 'chiclet'
-            ..innerHtml = 'Supper',
-          ParagraphElement()
-            ..className = 'price'
-            ..innerHtml = '&nbsp;Ksh <span>$supperPrice</span>',
-        ],
-      DivElement()
-        ..className = 'food'
-        ..innerText = supper,
-      DivElement()
-        ..className = 'price-total'
-        ..innerHtml = 'Total: Ksh <span>${totalPrice()}</span>',
-      if (!isToday())
-        ParagraphElement()
-          ..className = 'minor-headings'
-          ..innerText = 'BREAKFAST',
-      if (!isToday()) ParagraphElement()..innerText = breakfast,
-      if (!isToday())
-        ParagraphElement()
-          ..className = 'minor-headings'
-          ..innerText = 'Supper',
-      if (!isToday()) ParagraphElement()..innerText = supper,
-      if (!isToday())
-        ParagraphElement()
-          ..className = 'minor-price'
-          ..innerText = 'Total: Ksh ${totalPrice().toString()}',
-    ];
+              ..className = 'minor-headings'
+              ..innerText = 'BREAKFAST',
+            ParagraphElement()..innerText = breakfast,
+            ParagraphElement()
+              ..className = 'minor-headings'
+              ..innerText = 'Supper',
+            ParagraphElement()..innerText = supper,
+            ParagraphElement()
+              ..className = 'minor-price'
+              ..innerText = 'Total: Ksh ${totalPrice().toString()}',
+          ];
 }
