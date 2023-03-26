@@ -42,7 +42,7 @@ class Card {
   int totalPrice() => breakfastPrice + supperPrice;
 
   /// Checks if the date passed into the constructor matches the current date.
-  bool isToday() => date == DateTime.now();
+  bool isToday() => date.day == DateTime.now().day;
 
   /// Method to convert `DateTime`'s `weekday`
   /// into a string representation.
@@ -81,11 +81,10 @@ class Card {
         ..children = [
           DivElement()
             ..className = 'chiclet'
-            ..innerHtml = 'Breakfast \u00A0is',
+            ..innerHtml = 'Breakfast',
           ParagraphElement()
             ..className = 'price'
-            ..innerText = 'Ksh'
-            ..children = [SpanElement()..innerText = breakfastPrice.toString()],
+            ..innerHtml = '&nbsp;Ksh <span>$breakfastPrice</span>',
         ],
       DivElement()
         ..className = 'food'
@@ -95,34 +94,30 @@ class Card {
         ..children = [
           DivElement()
             ..className = 'chiclet'
-            ..innerHtml = 'Supper \u00A0is',
+            ..innerHtml = 'Supper',
           ParagraphElement()
             ..className = 'price'
-            ..innerText = 'Ksh'
-            ..children = [
-              SpanElement()..innerText = supperPrice.toString(),
-            ],
+            ..innerHtml = '&nbsp;Ksh <span>$supperPrice</span>',
         ],
       DivElement()
         ..className = 'food'
         ..innerText = supper,
       DivElement()
         ..className = 'price-total'
-        ..innerHtml = 'Total: Ksh '
-        ..children = [
-          SpanElement()..innerText = totalPrice().toString(),
-        ],
+        ..innerHtml = 'Total: Ksh <span>${totalPrice()}</span>',
       if (!isToday())
         ParagraphElement()
           ..className = 'minor-headings'
           ..innerText = 'BREAKFAST',
-      ParagraphElement()..innerText = breakfast,
-      ParagraphElement()
-        ..className = 'minor-headings'
-        ..innerText = 'Supper',
-      ParagraphElement()..innerText = supper,
-      ParagraphElement()
-        ..className = 'minor-price'
-        ..innerText = 'Total: Ksh ${totalPrice().toString()}',
+      if (!isToday()) ParagraphElement()..innerText = breakfast,
+      if (!isToday())
+        ParagraphElement()
+          ..className = 'minor-headings'
+          ..innerText = 'Supper',
+      if (!isToday()) ParagraphElement()..innerText = supper,
+      if (!isToday())
+        ParagraphElement()
+          ..className = 'minor-price'
+          ..innerText = 'Total: Ksh ${totalPrice().toString()}',
     ];
 }
