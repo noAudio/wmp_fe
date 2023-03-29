@@ -1,6 +1,5 @@
 import 'dart:html';
 
-import 'package:wmp_fe/enums/food_type_enum.dart';
 import 'package:wmp_fe/enums/input_mode_enum.dart';
 import 'package:wmp_fe/mock_data.dart';
 import 'package:wmp_fe/models/food.dart';
