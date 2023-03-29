@@ -25,15 +25,15 @@ class AddButton {
         foodPriceInput.value == '') {
       // TODO: Create validator and check for empty space with regex
       if (foodNameInput.value == '' || foodNameInput.value == ' ') {
-        foodNameInput.style.border = '2px solid red';
+        foodNameInput.classes.add('error-border');
       }
       if (foodPriceInput.value == '') {
-        foodPriceInput.style.border = '2px solid red';
+        foodPriceInput.classes.add('error-border');
       }
     } else {
       // TODO: Save new Food to store
-      foodNameInput.style.border = '2px solid black';
-      foodPriceInput.style.border = '2px solid black';
+      foodNameInput.classes.remove('error-border');
+      foodPriceInput.classes.remove('error-border');
       var newFood = Food(
         name: foodNameInput.value as String,
         price: int.parse(foodPriceInput.value as String),
