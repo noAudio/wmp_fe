@@ -3,7 +3,18 @@ import 'dart:html';
 import 'package:wmp_fe/enums/food_type_enum.dart';
 import 'package:wmp_fe/models/food.dart';
 
+import 'components/food_item.dart';
+
 class EditingModal {
+  // mock data
+  List<Food> foods = [
+    Food(name: 'Mandazi', price: 12, foodType: FoodType.breakfast),
+    Food(name: 'Ugali', price: 34, foodType: FoodType.supper),
+    Food(name: 'Bread and eggs', price: 56, foodType: FoodType.breakfast),
+    Food(name: 'Chapati', price: 78, foodType: FoodType.supper),
+    Food(name: 'Pancakes', price: 90, foodType: FoodType.breakfast),
+  ];
+
   /// Filters the list of foods from the server based on the user input.
   void searchFood(Event event) {
     // TODO: Check if input value is in current list of foods.
@@ -67,14 +78,7 @@ class EditingModal {
                 ..classes.addAll(['flex-column', 'food-list'])
                 ..children = [
                   // TODO: Iterate over a list of foods returned from server
-                  DivElement()
-                    ..classes.addAll(['flex-row', 'food-item'])
-                    ..children = [
-                      ParagraphElement()..innerHtml = 'Mandazi &nbsp;',
-                      Element.tag('i')
-                        ..classes.addAll(['material-icons', 'md-12'])
-                        ..innerText = 'delete',
-                    ],
+                  for (Food food in foods) FoodItem(food: food).ui(),
                 ],
               DivElement()
                 ..classes.addAll(['flex-row', 'add-new', 'pad-10px'])
