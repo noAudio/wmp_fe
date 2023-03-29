@@ -8,6 +8,9 @@ import 'components/add_button.dart';
 import 'components/editing_input.dart';
 import 'components/food_item.dart';
 
+/// A UI modal that allows the user to edit foods in the database.
+/// All foods are listed and can be filtered using the search input.
+/// User actions include filtering, deletion and addition.
 class EditingModal {
   // mock data
   List<Food> foods = [
