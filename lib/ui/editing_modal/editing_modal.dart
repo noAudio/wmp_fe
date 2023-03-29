@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:wmp_fe/enums/food_type_enum.dart';
 import 'package:wmp_fe/enums/input_mode_enum.dart';
+import 'package:wmp_fe/mock_data.dart';
 import 'package:wmp_fe/models/food.dart';
 
 import 'components/add_button.dart';
@@ -13,13 +14,7 @@ import 'components/food_item.dart';
 /// User actions include filtering, deletion and addition.
 class EditingModal {
   // mock data
-  List<Food> foods = [
-    Food(name: 'Mandazi', price: 12, foodType: FoodType.breakfast),
-    Food(name: 'Ugali', price: 34, foodType: FoodType.supper),
-    Food(name: 'Bread and eggs', price: 56, foodType: FoodType.breakfast),
-    Food(name: 'Chapati', price: 78, foodType: FoodType.supper),
-    Food(name: 'Pancakes', price: 90, foodType: FoodType.breakfast),
-  ];
+  List<Food> foods = mockFoods;
 
   /// Builds out the UI for a modal that shows editing options
   /// for the user.
