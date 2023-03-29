@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .aside {
@@ -37,8 +37,8 @@
 
 .card {
   border-radius: 5px;
-  border-left: 4px solid #784AE2;
-  background-color: #FBFAFE;
+  border-left: 4px solid #784ae2;
+  background-color: #fbfafe;
 }
 
 .card-main {
@@ -51,7 +51,7 @@
 }
 
 .title {
-  color: #784AE2;
+  color: #784ae2;
   align-items: flex-start;
 }
 
@@ -67,7 +67,7 @@
 .chiclet {
   color: white;
   font-size: 0.8rem;
-  background-color: #784AE2;
+  background-color: #784ae2;
   padding: 7px;
   border-radius: 15px;
 }
@@ -78,7 +78,7 @@
 
 .price span,
 .price-total span {
-  color: #2DBF8B;
+  color: #2dbf8b;
 }
 
 .week {
@@ -126,7 +126,7 @@
   width: 40%;
 }
 
-.close  {
+.close {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -157,7 +157,7 @@
   margin: 4px 0;
 }
 
-.add-new *{
+.add-new * {
   padding: 10px;
   border-radius: 5px;
 }
@@ -178,8 +178,6 @@ option {
   z-index: -1;
 }
 
-
-
 /* Utility classes */
 .pad-5 {
   padding: 5%;
@@ -190,10 +188,18 @@ option {
 .material-icons.md-12 {
   font-size: 12px;
 }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
 
 .flex-row {
   display: flex;
