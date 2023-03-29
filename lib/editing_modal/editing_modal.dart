@@ -1,8 +1,10 @@
 import 'dart:html';
 
 import 'package:wmp_fe/enums/food_type_enum.dart';
+import 'package:wmp_fe/enums/input_mode_enum.dart';
 import 'package:wmp_fe/models/food.dart';
 
+import 'components/editing_input.dart';
 import 'components/food_item.dart';
 
 class EditingModal {
@@ -68,12 +70,11 @@ class EditingModal {
           DivElement()
             ..className = 'flex-column'
             ..children = [
-              InputElement()
-                ..type = 'search'
-                ..name = 'search'
-                ..id = 'search'
-                ..placeholder = 'Search for specific food'
-                ..onChange.listen(searchFood),
+              EditingInput(
+                identifier: 'search',
+                placeholder: 'Search for specific food',
+                inputMode: InputMode.search,
+              ).ui(),
               DivElement()
                 ..classes.addAll(['flex-column', 'food-list'])
                 ..children = [
@@ -83,17 +84,17 @@ class EditingModal {
               DivElement()
                 ..classes.addAll(['flex-row', 'add-new', 'pad-10px'])
                 ..children = [
-                  InputElement()
-                    ..type = 'text'
-                    ..name = 'food-name'
-                    ..id = 'food-name'
-                    ..placeholder = 'Food name',
+                  EditingInput(
+                    identifier: 'food-name',
+                    placeholder: 'Food name',
+                    inputMode: InputMode.text,
+                  ).ui(),
                   SpanElement(),
-                  InputElement()
-                    ..type = 'number'
-                    ..name = 'food-price'
-                    ..id = 'food-price'
-                    ..placeholder = 'Price',
+                  EditingInput(
+                    identifier: 'food-price',
+                    placeholder: 'Price',
+                    inputMode: InputMode.number,
+                  ).ui(),
                   SpanElement(),
                   SelectElement()
                     ..name = 'food-type'
