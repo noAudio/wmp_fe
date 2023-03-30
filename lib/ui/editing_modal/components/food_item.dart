@@ -5,7 +5,7 @@ import 'package:wmp_fe/models/food.dart';
 class FoodItem {
   Food food;
   Element deleteButton = Element.tag('i')
-    ..classes.addAll(['material-icons', 'md-12'])
+    ..classes.addAll(['material-icons', 'md-12', 'btn-delete'])
     ..innerText = 'delete';
 
   FoodItem({

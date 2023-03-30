@@ -157,6 +157,11 @@
   margin: 4px 0;
 }
 
+.btn-delete:hover {
+  cursor: pointer;
+  color: red;
+}
+
 .add-new * {
   padding: 10px;
   border-radius: 5px;
@@ -217,4 +222,8 @@ option {
 
 .center-txt {
   text-align: center;
+}
+
+.hide {
+  display: none;
 }
