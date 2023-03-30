@@ -46,7 +46,7 @@ class AddButton {
   }
 
   ButtonElement ui() => ButtonElement()
-    ..className = 'btn-util'
+    ..className = 'btn-util center-txt'
     ..innerText = 'Add'
     ..onClick.listen(addFood);
 }

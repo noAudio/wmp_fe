@@ -42,7 +42,7 @@ class EditingModal {
                   for (Food food in foods) FoodItem(food: food).ui(),
                 ],
               DivElement()
-                ..classes.addAll(['flex-row', 'add-new', 'pad-10px'])
+                ..classes.addAll(['flex-column', 'add-new', 'pad-10px'])
                 ..children = [
                   EditingInput(
                     identifier: 'food-name',
