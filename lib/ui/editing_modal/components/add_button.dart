@@ -35,6 +35,7 @@ class AddButton {
       foodNameInput.classes.remove('error-border');
       foodPriceInput.classes.remove('error-border');
       var newFood = Food(
+        // TODO: Set the first letter of the name to uppercase
         name: foodNameInput.value as String,
         price: int.parse(foodPriceInput.value as String),
         foodType: foodTypeInput.value == 'breakfast'
