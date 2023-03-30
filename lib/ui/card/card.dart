@@ -107,6 +107,8 @@ class Card {
               ..innerHtml = 'Total: Ksh <span>${totalPrice()}</span>',
           ]
         : [
+            HeadingElement.h5()
+              ..innerText = '${date.day} ${whatDay(date.weekday)}',
             ParagraphElement()
               ..className = 'minor-headings'
               ..innerText = 'BREAKFAST',
